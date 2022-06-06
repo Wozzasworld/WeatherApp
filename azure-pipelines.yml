@@ -21,10 +21,10 @@ stages:
       vmImage: ubuntu-latest
     steps:
     - task: Docker@2
-  inputs:
-    containerRegistry: 'Terraform Docker Hub'
-    repository: 'wozzasworld/weatherapp'
-    command: 'buildAndPush'
-    Dockerfile: '**/Dockerfile'
+      inputs:
+        containerRegistry: 'Terraform Docker Hub'
+        repository: 'wozzasworld/weatherapp'
+        command: 'buildAndPush'
+        Dockerfile: '**/Dockerfile'
         tags: |
           $(tag)
